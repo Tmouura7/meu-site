@@ -1,0 +1,162 @@
+
+
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido de Namoro 💖</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column; /* Organiza tudo em coluna */
+            align-items: center; /* Centraliza o conteúdo */
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container1 {
+            width: 80%;
+            max-width: 800px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px; /* Espaço entre a lista e o pedido */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+
+        .container1 h1, .container1 h4 {
+            text-align: center;
+        }
+
+        ol {
+            padding-left: 20px;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .pedido {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            text-align: center;
+        }
+
+        .pedido h1 {
+            color: #e74c3c;
+        }
+
+        .hearts {
+            font-size: 30px;
+            color: #e74c3c;
+            animation: pulsar 1s infinite alternate;
+        }
+
+        .btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .yes {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .no {
+            background: #ccc;
+            color: black;
+        }
+
+        @keyframes pulsar {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+
+        /* Nova mensagem oculta */
+        .mensagem {
+            display: none;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #e74c3c;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container1">
+        <h1>Oi, minha rosa 🌹</h1><br>
+<h4>Vou começar lhe dizendo o pq deve namorar comigo!!!</h4> <br>
+       <br> <h4>❤️ Motivos para Namorar Comigo ❤️</h4>
+        <ol>
+            <li><code>Sou carinhosa</code> e sempre vou te mimar.</li>
+            <li><code>Vou tentar lhe fazer sorrir</code> até nos dias difíceis.</li>
+            <li><code>Te apoio</code> nos seus sonhos e desafios.</li>
+            <li><code>Tenho bom gosto</code> pra séries e filmes (eu acho).</li>
+            <li><code>Vou fazer surpresas</code> para te deixar feliz.</li>
+            <li><code>Vou te respeitar</code> e valorizo cada detalhe teu.</li>
+            <li><code>Sou fiel</code>, porque você merece o melhor!!</li>
+            <li><code>Nosso amor</code> só tende a crescer! 💖</li>
+            <li>E o último, A GENTE COMBINA EM TUDO! <br><br>
+                <img src="nos.jpg" alt="Foto nossa" width="100">
+            </li>
+        </ol>
+    </div>
+
+    <div class="pedido">
+        <h1>💖 Quer namorar comigo? 💖</h1>
+        <p>Desde o momento em que te conheci, percebi que você é especial. Você ilumina meus dias e faz meu coração bater mais forte. Então, que tal fazermos essa história juntos?</p>
+        <div class="hearts">❤️❤️❤️</div>
+        <div class="btns">
+            <button class="btn yes" onclick="responder('Sim')">Sim! 😍</button>
+            <button class="btn no" onclick="responder('Não')">Não... 😢</button>
+        </div>
+
+        <!-- Mensagem de resposta -->
+        <div id="mensagem" class="mensagem"></div>
+    </div>
+
+    <script>
+        function responder(resposta) {
+            let mensagem = document.getElementById("mensagem");
+
+            if (resposta === 'Sim') {
+                mensagem.innerHTML = "🎉 Você fez uma ótima escolha! Agora somos um casal perfeito! 💖🥰";
+            } else {
+                mensagem.innerHTML = "😢 Ahhh... Mas eu não desisto fácil! Vou te conquistar ainda!";
+            }
+
+            // Exibe a mensagem abaixo dos botões
+            mensagem.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
